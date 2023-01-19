@@ -179,5 +179,34 @@ print("The product of the second list: ", [producList(ListSecondTwo))
 EXERCISE 6=============================================================================================================================
 
 
-def Fact(n):
-    if n
+def Fact(n):  
+   if n == 1:  
+       return n  
+   else:  
+       return n*Fact(n-1)  
+#Taking inpout from the user.
+num = int(input("Kindly enter a number: "))  
+#Its checking if the users input is valid. Negative numbers are prohibited.
+
+if num < 0:  
+   print("Negative numbers are invalid! Please try again!")  
+
+   #If the users enters 0 then the code will say the factorial for 0 is 1.
+elif num == 0:  
+   print("The factorial for 0 is 1.")  
+
+else:  
+   print("The factorial for",num,"is",Fact(num))  
+
+
+
+EXERCISE 7=============================================================================================================================
+
+
+
+#List of delaring the tuples.
+marks = [("CodeLab I",67),("web Development", 75),("CodeLabII",74),("Smartphone Apps",68),("Games Development",70),("Responsive web",65)]
+
+#The tuples are sortedby the item value of the second element of the tuple.
+Marks = sorted(marks, key = lambda x : x[1])
+print(Marks)
